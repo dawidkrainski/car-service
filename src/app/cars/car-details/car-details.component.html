@@ -1,0 +1,87 @@
+<cs-header>
+  <p levels>cars / {{ car?.model }}</p>
+  <div content>
+    <p >Car Details</p>
+  </div>
+</cs-header>
+
+
+<div class="container">
+  <p class="data-header">edit {{car?.model}}</p>
+<div class="data-container">
+<form [formGroup]="carForm">
+  <div class="row form-group">
+    <div class="col-sm-4">
+    <label>Model</label>
+    <input formControlName="model" type="text" class="form-control"  placeholder="model">
+    <p *ngIf="!carForm.get('model')!.valid && carForm.get('model')!.dirty"  class = "error">This field is required!</p>
+    </div>
+       <div class="col-sm-4">
+    <label>Type</label>
+    <input formControlName="type" type="text" class="form-control" placeholder="type">
+    </div>
+       <div class="col-sm-4">
+    <label>plate</label>
+    <input formControlName="plate" type="text" class="form-control" placeholder="plate">
+     <p *ngIf="!carForm.get('plate')!.valid && carForm.get('plate')!.dirty" class = "error">This field is required! and must have min. 3 and max 7 chards </p>
+    </div>
+  </div>
+
+   <div class="row form-group">
+    <div class="col-sm-4">
+    <label>Delivery date</label>
+    <input formControlName="deliveryDate" type="text" class="form-control" placeholder="delivery date">
+    </div>
+       <div class="col-sm-4">
+    <label>Deadline</label>
+    <input formControlName="deadline" type="text" class="form-control" placeholder="deadline">
+    </div>
+       <div class="col-sm-4">
+    <label>color</label>
+    <input formControlName="color" type="text" class="form-control" placeholder="color">
+    </div>
+  </div>
+
+   <div class="row form-group">
+    <div class="col-sm-4">
+    <label>Power</label>
+    <input formControlName="power" type="number" class="form-control" placeholder="power">
+    </div>
+       <div class="col-sm-4">
+    <label>cost</label>
+    <input formControlName="cost" type="number" class="form-control" placeholder="cost">
+    </div>
+           <div class="col-sm-4">
+    <label>year</label>
+    <input formControlName="year" type="number" class="form-control" placeholder="year">
+    </div>
+
+
+  </div>
+
+   <div class="row form-group">
+    <div class="col-sm-4">
+    <label>Client Firstname</label>
+    <input formControlName="clientFirstName" type="text" class="form-control" placeholder="Firstname">
+    </div>
+       <div class="col-sm-4">
+    <label>Client Surname</label>
+    <input formControlName="clientSurname" type="text" class="form-control" placeholder="Surname">
+    </div>
+
+         <div class="damaged" >
+    <label>Is car fully damaged </label>
+    <input formControlName="isFullyDamaged" type="checkbox">
+    </div>
+
+     <div class="col-sm-12">
+      <button [disabled]="carForm.invalid" (click)= "updateCar()" type="submit" class="btn btn-primary float-right">Update Car</button>
+<button  (click)= "carForm.reset()" type="submit" class="btn btn-default float-right">Reset</button>
+</div>
+   </div>
+
+</form>
+
+
+</div>
+</div>
