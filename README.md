@@ -1,9 +1,10 @@
 #Uruchomienie aplikacji 
 1. W eksporatorze windows prawym przyciskiem myszy uruchamiamy otwórz na folderze car-api. 
-2. W cmd wpisujemy komendę "node ."
-3. następnie uruchamiamy popbrany projekt i wpisujemy "npm install" w terminalu 
-4. po zainstalowaniu wpisujemy "ng serve"
-5. projekt powinien działać prawidłowo. 
+2. następnie w terminalu wprowadzamy komendę npm install
+3. W cmd wpisujemy komendę "node ."
+4. następnie uruchamiamy popbrany projekt i wpisujemy "npm install" w terminalu 
+5. po zainstalowaniu wpisujemy "ng serve"
+6. projekt powinien działać prawidłowo. 
 # CrsService
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
